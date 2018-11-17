@@ -1,4 +1,6 @@
-![logo](art/logo.png)
+<p align="center">
+	<img src="art/logo.png" alt="logo" />
+</p>
 
 <p align="center">
    <a href="https://bintray.com/lqr/maven/LzViewPager">
