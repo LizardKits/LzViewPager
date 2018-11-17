@@ -36,8 +36,8 @@ import java.util.Collections;
 import java.util.Comparator;
 
 /**
- * 创建者：GitLqr
- * 描述：V4包下的ViewPager源码扩展
+ * Author：GitLqr
+ * Desc：V4包下的ViewPager源码扩展
  */
 class V4ViewPagerExt extends ViewGroup {
 
@@ -53,7 +53,7 @@ class V4ViewPagerExt extends ViewGroup {
     /**
      * 自定义ViewPager翻页时间
      *
-     * @param scrollDuration
+     * @param scrollDuration 时长 ms
      */
     public void setScrollDuration(int scrollDuration) {
         this.mScrollDuration = scrollDuration;
@@ -203,9 +203,9 @@ class V4ViewPagerExt extends ViewGroup {
     }
 
     /**
-     * Simple implementation of the {@link android.support.v4.view.LazyViewPager.OnPageChangeListener} interface with stub
+     * Simple implementation of the {\@link android.support.v4.view.LazyViewPager.OnPageChangeListener} interface with stub
      * implementations of each method. Extend this if you do not intend to override
-     * every method of {@link android.support.v4.view.LazyViewPager.OnPageChangeListener}.
+     * every method of {\@link android.support.v4.view.LazyViewPager.OnPageChangeListener}.
      */
     public static class SimpleOnPageChangeListener implements OnPageChangeListener {
         @Override
@@ -393,15 +393,17 @@ class V4ViewPagerExt extends ViewGroup {
      * current page in the view hierarchy in an idle state. Pages beyond this
      * limit will be recreated from the adapter when needed.
      * <p>
-     * <p>This is offered as an optimization. If you know in advance the number
+     * This is offered as an optimization. If you know in advance the number
      * of pages you will need to support or have lazy-loading mechanisms in place
      * on your pages, tweaking this setting can have benefits in perceived smoothness
      * of paging animations and interaction. If you have a small number of pages (3-4)
      * that you can keep active all at once, less time will be spent in layout for
-     * newly created view subtrees as the user pages back and forth.</p>
+     * newly created view subtrees as the user pages back and forth.
+     * </p>
      * <p>
-     * <p>You should keep this limit low, especially if your pages have complex layouts.
-     * This setting defaults to 1.</p>
+     * You should keep this limit low, especially if your pages have complex layouts.
+     * This setting defaults to 1.
+     * </p>
      *
      * @param limit How many pages will be kept offscreen in an idle state.
      */
@@ -1318,14 +1320,16 @@ class V4ViewPagerExt extends ViewGroup {
     /**
      * Start a fake drag of the pager.
      * <p>
-     * <p>A fake drag can be useful if you want to synchronize the motion of the ViewPager
+     * A fake drag can be useful if you want to synchronize the motion of the ViewPager
      * with the touch scrolling of another view, while still letting the ViewPager
      * control the snapping motion and fling behavior. (e.g. parallax-scrolling tabs.)
      * Call {@link #fakeDragBy(float)} to simulate the actual drag motion. Call
      * {@link #endFakeDrag()} to complete the fake drag and fling as necessary.
+     * </p>
      * <p>
-     * <p>During a fake drag the ViewPager will ignore all touch events. If a real drag
+     * During a fake drag the ViewPager will ignore all touch events. If a real drag
      * is already in progress, this method will return false.
+     * </p>
      *
      * @return true if the fake drag began successfully, false if it could not be started.
      * @see #fakeDragBy(float)

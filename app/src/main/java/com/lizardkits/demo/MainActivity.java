@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mLzViewPager.setOffscreenPageLimit(0); // 设置ViewPager缓存页数（0为不缓存）
-        mLzViewPager.setScrollDuration(100); // 设置ViewPager翻页时长
+        mLzViewPager.setScrollDuration(100); // 设置ViewPager翻页时长（速度）
+        mLzViewPager.resetScrollDuration(); // 使用默认翻页速度
         mLzViewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
